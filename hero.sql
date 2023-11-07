@@ -172,3 +172,10 @@ VALUES
 	from hero left join class
 	on hero.hero_id = class.class_id
 	where class_name = 'Archers'
+
+    select avg(player_level), class_name as average_lvl
+	from class left join hero 
+	on class.class_id = hero.class_id 
+	left join player on hero.hero_id = player.player_id
+	group by class_name
+	order by average_lvl desc;
