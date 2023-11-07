@@ -168,3 +168,7 @@ VALUES
 	on player.player_id = hero.hero_id
 	where is_active = true
 	
+    select hero_name 
+	from hero left join class
+	on hero.hero_id = class.class_id
+	where class_name = 'Archers'
