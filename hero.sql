@@ -161,4 +161,10 @@ VALUES
     UPDATE hero
 	set is_active = false 
 	where hero_id = 1
+
+    select player_name,
+	hero_name
+	from player left join hero
+	on player.player_id = hero.hero_id
+	where is_active = true
 	
